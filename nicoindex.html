@@ -1,0 +1,108 @@
+<html>
+<head>
+<style>
+	td, th {
+  		border: 1px  black solid;
+	}
+	table{
+		border: 1px  black solid;
+		margin-left: auto;
+ 		margin-right: auto;
+	}
+</style>
+</head>
+<body>
+<h2 align="center" id="header">ニコニ広告ポイント電卓</h2>
+	<table>
+
+		<tr>
+			<td width="150" id="ticket_col">チケットのポイント:</td>
+			<td> 
+				<input type="number" id="ticket_selected" style="width:75px" onChange="update()" value=100>
+			</td>
+			<td width="60" id="rank_col">Rank: </td>
+			<td width="60">				
+				<select id="rank_selected" onChange="update()">
+					<option value=0.20>SSS</option>
+					<option value=0.18>SS</option>
+					<option value=0.15 selected="selected">S</option>
+					<option value=0.08>A</option>
+					<option value=0.04>B</option>
+					<option value=0.02>C</option>
+					<option value=0>D</option>
+				</select>
+			</td>
+			<td width="120" id="user_discount_col">広告主割引=</td>
+			<td width="30">
+				<spec id="user_discount">0.20</spec>
+			</td>
+			<td width="180" id="cacha_pt_col">ポイント利用毎に福引:</td>
+			<td>
+				<input type="number" id="cacha_pt_selected" style="width:75px" onChange="update()" value=300>
+			</td>
+		</tr>
+
+
+    </table>
+	<br>
+	<table >
+	<thead>
+		<th id="ticket_inputted_head">投入チケット</th>
+		<th id="point_inputted_head">投入ポイント</th>
+		<th id="point_consumed_head">消費ポイント</th>
+		<th id="point_waste_head">point waste</th>
+		<th id="cacha_waste_head">cacha waste</th>
+	</thead>
+	<tbody id="ad_list">
+
+		
+	</tbody>
+	
+	</table>
+	<br>
+	<table >
+	  <tr>
+	    <td width="101">広告主ランク</td>
+	    <td width="101">必要貢献度</td>
+	    <td width="101">割引</td>
+      </tr>
+	  <tr>
+	    <td>SSS級</td>
+	    <td>3,000,000</td>
+	    <td>20％</td>
+      </tr>
+	  <tr>
+	    <td>SS級</td>
+	    <td>1,000,000</td>
+	    <td>18%</td>
+      </tr>
+	  <tr>
+	    <td>S級</td>
+	    <td>150,000</td>
+	    <td>15%</td>
+      </tr>
+	  <tr>
+	    <td>A級</td>
+	    <td>15,000</td>
+	    <td>8%</td>
+      </tr>
+	  <tr>
+	    <td>B級</td>
+	    <td>6,000</td>
+	    <td>4%</td>
+      </tr>
+	  <tr>
+	    <td>C級</td>
+	    <td>3,000</td>
+	    <td>2%</td>
+      </tr>
+	  <tr>
+	    <td>D級</td>
+	    <td>0</td>
+	    <td>0%</td>
+      </tr>
+</table>
+	<script src="./nico.js"></script>
+</body>
+
+</html>
